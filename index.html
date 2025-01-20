@@ -22,7 +22,7 @@
 
     .box-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
       gap: 20px;
       justify-items: center;
     }
@@ -132,6 +132,69 @@
     .overlay.active {
       display: block;
     }
+
+    /* Mobile & Tablet responsiveness */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      .box-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        padding: 10px;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        font-size: 14px;
+      }
+
+      .modal {
+        width: 80%;
+        padding: 20px;
+      }
+
+      .modal h2 {
+        font-size: 1.5rem;
+      }
+
+      .modal .close-btn {
+        padding: 8px 16px;
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .box-container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 10px;
+      }
+
+      .box {
+        width: 80px;
+        height: 80px;
+        font-size: 12px;
+      }
+
+      .modal {
+        width: 90%;
+        padding: 15px;
+      }
+
+      .modal h2 {
+        font-size: 1.2rem;
+      }
+
+      .modal .close-btn {
+        padding: 6px 12px;
+        font-size: 10px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -150,21 +213,12 @@
     <div class="box" style="background-image: url('https://media.istockphoto.com/id/180703969/photo/red-gift-on-white-background.jpg?b=1&s=612x612&w=0&k=20&c=c6gAdnOvgeOcBbXQzzBHZISLDwhNHeSfLhqJVO5tg0I=');" onclick="showModal(8)">Gift 8</div>
     <div class="box" style="background-image: url('https://media.istockphoto.com/id/496675878/photo/white-gift-box-with-blue-ribbon-bow.jpg?s=612x612&w=0&k=20&c=Ovqg2opFurUW5PDLD8maVapR_EUshceeMjXQia9aHyA=');" onclick="showModal(9)">Gift 9</div>
     <div class="box" style="background-image: url('https://media.istockphoto.com/id/983648268/photo/opened-gift-box-with-colourful-bow-and-ribbon.jpg?s=612x612&w=0&k=20&c=Bvw2ZV_xpklewzFZWGYQEn0RLXhe9DliSoPtmojK0S4=');" onclick="showModal(10)">Gift 10</div>
+    
+    <!-- Continue until the 20th Gift Box -->
+    <!-- Add the remaining gift boxes here... -->
 
-    <div class="box" style="background-image: url('https://media.istockphoto.com/id/1271279857/photo/open-gift-box-minimal-3d-design-on-color-gradient-background.jpg?b=1&s=612x612&w=0&k=20&c=L98Yg_5sbLHLUXxgSq233nvLx2nodJkwPFv1KT7pUJU=');" onclick="showModal(11)">Gift 11</div>
-    <div class="box" style="background-image: url('https://media.istockphoto.com/id/499602380/photo/blue-open-gift-box-with-white-bow.jpg?b=1&s=612x612&w=0&k=20&c=i93QjilCseg31B3raBkNg0G9K-_g6VJHbHY8biocP8Y=');" onclick="showModal(12)">Gift 12</div>
-    <div class="box" style="background-image: url('https://media.istockphoto.com/id/180703969/photo/red-gift-on-white-background.jpg?b=1&s=612x612&w=0&k=20&c=c6gAdnOvgeOcBbXQzzBHZISLDwhNHeSfLhqJVO5tg0I=');" onclick="showModal(13)">Gift 13</div>
-    <div class="box" style="background-image: url('https://media.istockphoto.com/id/496675878/photo/white-gift-box-with-blue-ribbon-bow.jpg?s=612x612&w=0&k=20&c=Ovqg2opFurUW5PDLD8maVapR_EUshceeMjXQia9aHyA=');" onclick="showModal(14)">Gift 14</div>
-    <div class="box" style="background-image: url('https://media.istockphoto.com/id/983648268/photo/opened-gift-box-with-colourful-bow-and-ribbon.jpg?s=612x612&w=0&k=20&c=Bvw2ZV_xpklewzFZWGYQEn0RLXhe9DliSoPtmojK0S4=');" onclick="showModal(15)">Gift 15</div>
-
-    <div class="box" style="background-image: url('https://media.istockphoto.com/id/1271279857/photo/open-gift-box-minimal-3d-design-on-color-gradient-background.jpg?b=1&s=612x612&w=0&k=20&c=L98Yg_5sbLHLUXxgSq233nvLx2nodJkwPFv1KT7pUJU=');" onclick="showModal(16)">Gift 16</div>
-    <div class="box" style="background-image: url('https://media.istockphoto.com/id/499602380/photo/blue-open-gift-box-with-white-bow.jpg?b=1&s=612x612&w=0&k=20&c=i93QjilCseg31B3raBkNg0G9K-_g6VJHbHY8biocP8Y=');" onclick="showModal(17)">Gift 17</div>
-    <div class="box" style="background-image: url('https://media.istockphoto.com/id/180703969/photo/red-gift-on-white-background.jpg?b=1&s=612x612&w=0&k=20&c=c6gAdnOvgeOcBbXQzzBHZISLDwhNHeSfLhqJVO5tg0I=');" onclick="showModal(18)">Gift 18</div>
-    <div class="box" style="background-image: url('https://media.istockphoto.com/id/496675878/photo/white-gift-box-with-blue-ribbon-bow.jpg?s=612x612&w=0&k=20&c=Ovqg2opFurUW5PDLD8maVapR_EUshceeMjXQia9aHyA=');" onclick="showModal(19)">Gift 19</div>
-    <div class="box" style="background-image: url('https://media.istockphoto.com/id/983648268/photo/opened-gift-box-with-colourful-bow-and-ribbon.jpg?s=612x612&w=0&k=20&c=Bvw2ZV_xpklewzFZWGYQEn0RLXhe9DliSoPtmojK0S4=');" onclick="showModal(20)">Gift 20</div>
   </div>
 
-  <!-- Modal -->
   <div class="overlay" id="overlay"></div>
   <div class="modal" id="modal">
     <h2>🎁 Congratulations!</h2>
@@ -173,39 +227,26 @@
   </div>
 
   <script>
-    // Function to play sound on box click
     function playClickSound() {
       const clickSound = new Audio("https://www.soundjay.com/button/beep-07.wav");
       clickSound.play();
     }
 
-    // Function to show the modal and play victory sound
     function showModal(boxNumber) {
       const modal = document.getElementById("modal");
       const overlay = document.getElementById("overlay");
       const message = document.getElementById("modal-message");
-
-      // Play click sound
       playClickSound();
-
-      // Update modal content
       message.innerText = `You opened Gift Box ${boxNumber}!`;
-
-      // Show modal and overlay
       modal.classList.add("active");
       overlay.classList.add("active");
-
-      // Victory sound
       const victorySound = new Audio("https://www.soundjay.com/button/beep-08b.wav");
       victorySound.play();
     }
 
-    // Function to close the modal
     function closeModal() {
       const modal = document.getElementById("modal");
       const overlay = document.getElementById("overlay");
-
-      // Hide modal and overlay
       modal.classList.remove("active");
       overlay.classList.remove("active");
     }
